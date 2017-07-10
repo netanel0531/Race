@@ -16,6 +16,7 @@ public class GameActivity extends AppCompatActivity {
         //Trying to initialize
         GameEngine gameEngine = new GameEngine(2);
 
+
         //end of trying
 
         ImageView imageView = (ImageView) findViewById(R.id.firstCard);

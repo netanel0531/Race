@@ -17,7 +17,12 @@ public class GameEngine {
         deck = new ArrayList<>(112);
     }
 
+    //TODO: startGame is runnable? new thread? MAYBE only a turn is runnable...
     public void startGame() {
+        players.add(new Human(0));
+        players.add(new EasyComputer(1));
+
+
         while(!finish) {
             for(int i = 0; i < players.size(); i++) {
                 players.get(i).PlayTurn();

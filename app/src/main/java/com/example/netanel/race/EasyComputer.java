@@ -4,37 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by DELL on 11/06/2017.
+ * Created by DELL on 10/07/2017.
  */
 
-public class Human implements Player {
+public class EasyComputer implements Player {
 
     int id;
     List<Card> hand;
     int killometers;
-    PlayerState state;
-    ArrayList<PlayerState> rivals;
 
 
-    public Human(int id) {
+    public EasyComputer(int id) {
         this.id = id;
         hand = new ArrayList<>(5);
+
         this.killometers = 0;
-        state = new PlayerState();
-        rivals = new ArrayList<>();
     }
 
     @Override
     public void addRival(PlayerState r) {
-        rivals.add(r);
+
     }
+
     @Override
     public void updateRival(int id, PlayerState new_state) {
-        if (id >= this.id) {
-            id--;
-        }
-        rivals.remove(id);
-        rivals.add(id, new_state);
+
     }
 
     @Override
@@ -52,3 +46,4 @@ public class Human implements Player {
         this.killometers += addition;
     }
 }
+

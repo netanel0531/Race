@@ -13,14 +13,14 @@ public interface Player {
 
     /* needed in every player.
     int killometers = 0;
-    boolean start = false;
     ArrayList<Card> cards = new ArrayList<>(6);
     ArrayList<Card> blocks = new ArrayList<>();
     ArrayList<Card> immunity = new ArrayList<>();
     */
 
 
-
+    public void addRival(PlayerState r);
+    public void updateRival(int id, PlayerState new_state);
     public void PlayTurn();
     public void DrawCard(Card card);
     public void addKm(int addition);
